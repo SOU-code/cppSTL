@@ -117,11 +117,27 @@ void explainStack(){
     stack<int> st1,st2;
     st1.swap(st2);
 }
+//Explain Queue
+void explainQueue(){
+    queue<int> q;
+    q.push(1);
+    q.push(2);
+    q.push(3);
+    q.push(4); //{1,2,3,4}
+    q.emplace(5); //{1,2,3,4,5}
+
+    q.back(); //5
+    q.front();//1
+    q.pop(); //{2,3,4,5}
+    
+    //size,swap same
+}
 int main(){
     explainPair(); //Pair Concepts
     explainVector(); //Vector Concepts
     explainList(); //list concepts
     explainDeque(); //Deque concepts
     explainStack(); //Stack Concepts
+    explainQueue(); //Queue Concepts
     return 0;
 }
