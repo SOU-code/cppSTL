@@ -74,8 +74,20 @@ void explainPair(){
     pair<int, int> arr[] = {{1, 2}, {9, 3}, {6, 7}};
     cout << arr[1].second; //3
 }
+//List Concepts
+void explainList(){
+    list<int> ls;
+    ls.push_back(2); //{2}
+    ls.emplace_back(4); //{2,4}
+    ls.push_front(5); //{5,2,4}
+    ls.emplace_front(9); //{9,5,2,4}
+
+    //rest of the concept of vector
+    //begin,end,rbegin,rend,clear,insert,size,swap
+}
 int main(){
     explainPair(); //Pair Concepts
     explainVector(); //Vector Concepts
+    explainList(); //list concepts
     return 0;
 }
