@@ -152,7 +152,38 @@ void explainPQ(){
     pq.top(); //2
     pq.pop(); //{5,8,10}
 }
+// All set concepts
+//normal set ->(unique,sorted) o(logn)
+void explainSet(){
+    set<int> st;
+    st.insert(1);
+    st.insert(3);
+    st.insert(2);
+    st.insert(3); //{1,2,3}
 
+    //begin,end,rbegin,rend,clear,insert,size,swap
+
+    auto it = st.find(3); //where present iteration loc
+    auto it = st.find(5); //if not present return st.end()
+
+    //erase same concepts
+
+    int cnt = st.count(1); //1
+
+    //this is the syntax
+    auto it = st.lower_bound(2);
+    auto it = st.upper_bound(3);
+}
+//Multi set concepts
+void explainMultiSet(){
+    //all same but can store duplicate elements
+    multiset<int> mst;
+}
+//unodered set concepts
+void explainUSet(){
+    //unique and unsorted
+    unordered_set<int> st;
+}
 int main(){
     explainPair(); //Pair Concepts
     explainVector(); //Vector Concepts
@@ -161,5 +192,8 @@ int main(){
     explainStack(); //Stack Concepts
     explainQueue(); //Queue Concepts
     explainPQ(); //priority concepts
+    explainSet(); //normal set concepts
+    explainMultiSet(); //Multi set concepts
+    explainUSet(); //unodered set
     return 0;
 }
