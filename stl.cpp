@@ -215,6 +215,29 @@ void explainUnorderedMap(){
     multimap<int, int> mmp;
     //time take most of time o(1) but rare case o(n)
 }
+void explainSomeExtra(){
+    int n = 10;
+    int a[n];
+    vector<int> v;
+    //sort in increasing order
+    sort(a, a + n);
+    sort(v.begin(), v.end());
+    //sort in decreasing order
+    sort(a, a + n,greater<int>);
+
+    int num = 7;
+    int cnt = _builtin_popcount(); // in binary how many 1 present
+    long long num2 = 111132356565656;
+    int cnt2 = _builtin_popcountll();
+
+    string s = "123"; //to generated all permutation must always in sorted form
+    do{
+        cout<< s << " ";
+    } while (next_permutation(s.begin(), s.end()));
+
+    int maxi = *max_element(v.begin(), v.end());
+    int mini= *min_element(v.begin(), v.end());
+}
 int main(){
     explainPair(); //Pair Concepts
     explainVector(); //Vector Concepts
@@ -233,6 +256,8 @@ int main(){
     explainMap(); //normal map
     explainMultiMap();
     explainUnorderedMap();
+
+    explainSomeExtra();
 
     return 0;
 }
