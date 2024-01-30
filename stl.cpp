@@ -101,11 +101,27 @@ void explainDeque(){
     //rest of the concept of vector
     //begin,end,rbegin,rend,clear,insert,size,swap
 }
+//Stcak Concepts
+void explainStack(){
+    stack<int> st;
+    st.push(1);
+    st.push(2);
+    st.push(3);
+    st.push(4); //{4,3,2,1}
+    st.emplace(5); //{5,4,3,2,1}
 
+    st.top(); //5
+    st.pop(); //{4,3,2,1}
+    st.size(); //4
+    st.empty(); //false
+    stack<int> st1,st2;
+    st1.swap(st2);
+}
 int main(){
     explainPair(); //Pair Concepts
     explainVector(); //Vector Concepts
     explainList(); //list concepts
     explainDeque(); //Deque concepts
+    explainStack(); //Stack Concepts
     return 0;
 }
