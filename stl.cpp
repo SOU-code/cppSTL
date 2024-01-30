@@ -179,21 +179,60 @@ void explainMultiSet(){
     //all same but can store duplicate elements
     multiset<int> mst;
 }
-//unodered set concepts
+//unodered set concepts (most of time take o(1) rare case o(1) )
 void explainUSet(){
     //unique and unsorted
     unordered_set<int> st;
+}
+//All concepts of map sorted
+//normal map -> o(logn)
+void explainMap(){
+    // <key,value> unique key
+    map<pair<int, int>, int> mp1;
+    map<int, int> mp;
+    mp[1] = 2;
+    mp.emplace({3, 1});
+    mp.insert({2, 4});
+    
+    // {{1,2},{3,1},{2,4}}
+    for(auto it:mp){
+        cout << it.first << " " << it.second;
+    }
+    mp[1]; //2
+    mp[5]; //0
+    //find same as set
+    //lower_bound,upper_bound
+
+
+}
+// multiple map
+void explainMultiMap(){
+    multimap<int, int> mmp;
+    //same but store multiple key pairs
+}
+//unordered map
+void explainUnorderedMap(){
+    multimap<int, int> mmp;
+    //time take most of time o(1) but rare case o(n)
 }
 int main(){
     explainPair(); //Pair Concepts
     explainVector(); //Vector Concepts
     explainList(); //list concepts
+    
     explainDeque(); //Deque concepts
     explainStack(); //Stack Concepts
     explainQueue(); //Queue Concepts
+    
     explainPQ(); //priority concepts
+    
     explainSet(); //normal set concepts
     explainMultiSet(); //Multi set concepts
     explainUSet(); //unodered set
+    
+    explainMap(); //normal map
+    explainMultiMap();
+    explainUnorderedMap();
+
     return 0;
 }
