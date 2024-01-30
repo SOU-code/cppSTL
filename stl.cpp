@@ -129,9 +129,30 @@ void explainQueue(){
     q.back(); //5
     q.front();//1
     q.pop(); //{2,3,4,5}
-    
+
     //size,swap same
 }
+//Priority Queue concepts ( push,pop->o(logn) , top->o(1) )
+void explainPQ(){
+    // max heap
+    priority_queue<int> pq;
+    pq.push(5);//{5}
+    pq.push(2);//{5,2}
+    pq.push(8);//{8,5,2}
+    pq.emplace(10);//{10,8,5,2}
+    pq.top(); //10
+    pq.pop(); //{8,5,2}
+
+    //min heap
+    priority_queue<int,vector<int>,greater<int>> pq;
+    pq.push(5);//{5}
+    pq.push(2);//{2,5}
+    pq.push(8);//{2,5,8}
+    pq.emplace(10);//{2,5,8,10}
+    pq.top(); //2
+    pq.pop(); //{5,8,10}
+}
+
 int main(){
     explainPair(); //Pair Concepts
     explainVector(); //Vector Concepts
@@ -139,5 +160,6 @@ int main(){
     explainDeque(); //Deque concepts
     explainStack(); //Stack Concepts
     explainQueue(); //Queue Concepts
+    explainPQ(); //priority concepts
     return 0;
 }
